@@ -18,7 +18,7 @@ public class Program {
 		ChessMatch chessMatch = new ChessMatch();
 		List<ChessPiece> captured = new ArrayList<>();
 		
-		while (true) {
+		while (!chessMatch.getCheckMate()) { // Enquanto não estiver em check mate
 			try {
 				UI.clearScreen();
 				UI.printMatch(chessMatch, captured);
@@ -48,5 +48,8 @@ public class Program {
 				sc.nextLine();
 			}
 		}
+		// Deu check mate, finalizou a partida
+		UI.clearScreen();  // Limpar a tela
+		UI.printMatch(chessMatch, captured); // Mostra partida finalizada		
 	}
 }
