@@ -19,7 +19,7 @@ public class Program {
 		List<ChessPiece> captured = new ArrayList<>();
 		
 		while (!chessMatch.getCheckMate()) { // Enquanto não estiver em check mate
-			try {
+//			try {
 				UI.clearScreen();
 				UI.printMatch(chessMatch, captured);
 				System.out.println();
@@ -38,15 +38,15 @@ public class Program {
 				if (capturedPiece != null) {
 					captured.add(capturedPiece);
 				}				
-			}
-			catch (ChessException e) {
-				System.out.println(e.getMessage());
-				sc.nextLine();
-			}
-			catch (InputMismatchException e) {
-				System.out.println(e.getMessage());
-				sc.nextLine();
-			}
+//			}
+//			catch (ChessException e) {
+//				System.out.println(e.getMessage());
+//				sc.nextLine();
+//			}
+//			catch (InputMismatchException e) {
+//				System.out.println(e.getMessage());
+//				sc.nextLine();
+//			}
 		}
 		// Deu check mate, finalizou a partida
 		UI.clearScreen();  // Limpar a tela
