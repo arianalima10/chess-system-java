@@ -37,7 +37,13 @@ public class Program {
 
 				if (capturedPiece != null) {
 					captured.add(capturedPiece);
-				}				
+				}
+				
+				if (chessMatch.getPromoted() != null) { // Alguma peça foi promovida
+					System.out.print("Enter piece for promotion (B/N/R/Q): "); // Jogador indica para qual tipo de peça a peça Peão foi promovido
+					String type = sc.nextLine();
+					chessMatch.replacePromotedPiece(type); // Faz a troca de Peão para o tipo informado pelo jogador
+				}
 			}
 			catch (ChessException e) {
 				System.out.println(e.getMessage());
